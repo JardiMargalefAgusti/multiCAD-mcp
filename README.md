@@ -33,6 +33,21 @@ multiCAD-mcp is an MCP server that lets you control your CAD software using AI a
 
 ## Installation
 
+### Windows installer (no Python required)
+
+Run `Instalar_multiCAD-MCP.exe`. Installing the app **registers the MCP server
+automatically** in Claude Code and Claude Desktop (backing up your existing
+configuration and preserving every other MCP server you have). Then open a
+**new Claude session** and ask it, for example: *"Draw a red circle at 50,50
+with radius 25"*.
+
+If you ever need to redo the registration by hand:
+`"%LOCALAPPDATA%\Programs\multiCAD-MCP\multiCAD-MCP.exe" --registrar-mcp`
+
+See [installer/README.md](installer/README.md) to build the installer yourself.
+
+### From source
+
 Detailed installation instructions are available in [docs/01-SETUP.md](docs/01-SETUP.md).
 
 Quick start:

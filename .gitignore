@@ -14,8 +14,14 @@ __pycache__/
 htmlcov/
 coverage_report.txt
 
+# Installer build artifacts
+build/
+dist/
+installer/salida/
+
 # Test artifacts
 test_*.py
+!installer/test_mcp.py
 test_*.png
 test_*.txt
 verify_*.py

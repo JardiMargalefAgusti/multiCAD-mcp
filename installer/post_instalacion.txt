@@ -1,0 +1,41 @@
+﻿multiCAD-MCP instalado correctamente
+====================================
+
+El servidor MCP ya ha quedado registrado automáticamente en Claude Code y,
+si la tienes instalada, en Claude Desktop. Se ha guardado una copia de
+seguridad fechada de tu configuración antes de tocarla, y el resto de tus
+servidores MCP se han conservado intactos.
+
+IMPORTANTE: abre una SESIÓN NUEVA de Claude
+-------------------------------------------
+Los servidores MCP se cargan al arrancar la sesión. Una conversación que ya
+tuvieras abierta no lo verá nunca. Cierra Claude y vuelve a abrirlo.
+
+Cómo comprobar que funciona
+---------------------------
+1. Abre tu programa de CAD (AutoCAD, ZWCAD, GstarCAD o BricsCAD).
+2. En una sesión nueva de Claude, pídele por ejemplo:
+   "Dibuja un círculo rojo en 50,50 con radio 25"
+3. En Claude Code también puedes verificarlo con:  claude mcp list
+   (debe aparecer "multicad" como conectado)
+
+Panel y dashboard
+-----------------
+El acceso directo "multiCAD-MCP" abre un panel con el estado del registro,
+el dashboard web en tiempo real y la carpeta de datos.
+
+Configuración, logs y exportaciones
+-----------------------------------
+Tus ajustes editables y los logs están en:
+   %LOCALAPPDATA%\multiCAD-mcp\
+      config.json          puerto del dashboard, nivel de log, carpeta de salida
+      logs\multicad_mcp.log
+      logs\registro_mcp.log
+
+Si alguna vez necesitas rehacer el registro a mano:
+   "C:\...\multiCAD-MCP\multiCAD-MCP.exe" --registrar-mcp
+
+Desinstalar
+-----------
+Desde "Agregar o quitar programas". El desinstalador da de baja el servidor
+en la configuración de Claude automáticamente.
